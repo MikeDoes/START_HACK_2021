@@ -6,6 +6,9 @@
 -->
 <html>
 	<head>
+		<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+		<script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/posenet"></script>
+	
 		<title>Stellar by HTML5 UP</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
@@ -170,6 +173,72 @@
 			</div>
 
 		<!-- Scripts -->
+			<div id="pose_classifier" style="position: relative;">
+				<img src='images/flo3.png'/>
+			</div>
+
+
+		  <!-- Place your code in the script tag below. You can also use an external .js file -->
+		  <script>
+			var flipHorizontal = false;
+		
+			var imageElement = document.getElementById('pose_classifier').children[0];
+			
+
+			posenet.load({
+				architecture: 'ResNet50',
+				outputStride: 32,
+				inputResolution: { width: 257, height: 200 },
+				quantBytes: 2
+				}).then(function(net) {
+			  const pose = net.estimateSinglePose(imageElement, {
+				flipHorizontal: true
+			  });
+			  return pose;
+			}).then(function(pose){
+				
+				
+				let pose_classifier = document.getElementById('pose_classifier')
+
+
+				function plot_point(keypoint){
+					if (keypoint.score>0){
+						let point = document.createElement('div')
+						point.style.position = 'absolute'
+						point.style.height = "5px"
+						point.style.width = "5px"
+						point.style.backgroundColor = "red"
+						
+						point.style.top = ""+ parseInt(keypoint.position.y) +"px"
+						point.style.left = ""+ parseInt(keypoint.position.x) +"px"	
+						
+						point.id = keypoint.part
+						
+						pose_classifier.appendChild(point)
+						
+					}
+
+				}
+				
+
+
+				for(var i = 0; i<pose.keypoints.length; i++){
+					plot_point(pose.keypoints[i])
+					
+					
+				}
+
+
+
+
+
+
+
+
+
+
+			  console.log(pose);
+			})</script>
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
