@@ -181,18 +181,21 @@
 		  <!-- Place your code in the script tag below. You can also use an external .js file -->
 		  <script>
 			var flipHorizontal = false;
-		
+			
 			var imageElement = document.getElementById('pose_classifier').children[0];
 			
+			document.getElementById('pose_classifier').style.height = imageElement.height
+			document.getElementById('pose_classifier').style.width = imageElement.width
+
 
 			posenet.load({
 				architecture: 'ResNet50',
-				outputStride: 32,
-				inputResolution: { width: 257, height: 200 },
-				quantBytes: 2
+				outputStride: 16,
+				inputResolution: { width: imageElement.width, height: imageElement.height},
+				quantBytes: 4
 				}).then(function(net) {
 			  const pose = net.estimateSinglePose(imageElement, {
-				flipHorizontal: true
+				flipHorizontal: flipHorizontal
 			  });
 			  return pose;
 			}).then(function(pose){
