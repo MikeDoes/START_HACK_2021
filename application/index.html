@@ -30,14 +30,15 @@
             </header>
 
             <!-- Nav -->
-            <!-- <nav id="nav">
+            <nav id="nav">
                                                                         						<ul>
-                                                                        							<li><a href="#intro" class="active">Introduction</a></li>
-                                                                        							<li><a href="#first">First Section</a></li>
-                                                                        							<li><a href="#second">Second Section</a></li>
-                                                                        							<li><a href="#cta">Get Started</a></li>
+                                                                        							<li><a href="#intro" class="active">Pro </a></li>
+                                                                        							<li><a href="#first">Beautify</a></li>
+                                                                        							<li><a href="#second">Machine Learning</a></li>
+
+                                                                        							<li><a href="#second">About Us</a></li>
                                                                         						</ul>
-                                                                        					</nav> -->
+                                                                        					</nav>
 
             <!-- Main -->
                 <div id="main"> <!-- Introduction -->
@@ -73,16 +74,21 @@
 
                                 <h3>Left Arm</h3>
                                 <p></p>
+                                <span id="left-circle2" class="icon solid major style1 fa-code" style="color:rgba(0,0,0,0); position: relative;"></span>
+
+                                <h3>Left Leg</h3>
+                                <p></p>
                             </div>
+                            
                         </li>
 
                         <script></script>
 
                         <li>
-                            <div style="display: inline-block;border: solid 1px #ccc; text-align: center; position:relative;">
+                            <div id="video-div"style="display: inline-block; margin-left: 4px; text-align: center; position:relative;">
                                 <video id="video" style="position:relative; display: relative;" controls="true">
                                     <source
-                                    src="/datasets/vertical_horizontal.mp4">
+                                    src="/datasets/vertical.mp4">
                                     <!-- WebKit -->
                                     Your browser does not support HTML5 video tag. Please download FireFox 3.5 or higher.
                                 </video>
@@ -97,6 +103,11 @@
                                 <span id="right-circle" class="icon solid major style1 fa-code" style="color:rgba(0,0,0,0); position: relative;"></span>
 
                                 <h3>Right Arm</h3>
+                                <p></p>
+
+                                <span id="right-circle2" class="icon solid major style1 fa-code" style="color:rgba(0,0,0,0); position: relative;"></span>
+
+                                <h3>Right Leg</h3>
                                 <p></p>
                             </div>
                         </li>
@@ -240,7 +251,7 @@
                                                  -->
 
 
-        <div id="pose_classifier" style="position: relative;">
+        <div id="pose_classifier" style="position: relative; display: none;">
             <img src='images/flo3.png'/>
         </div>
 
@@ -279,16 +290,16 @@
 
                 setInterval(function () {
                     forward().then(function (pose) {
-
+                        
                         function plot_point(keypoint) {
                             let pose_classifier = document.getElementById('video').parentNode
 
                             if (keypoint.score > 0) {
                                 let point = document.createElement('div')
                                 point.style.position = 'absolute'
-                                point.style.height = "5px"
-                                point.style.width = "5px"
-                                point.style.backgroundColor = "red"
+                                point.style.height = "10px"
+                                point.style.width = "10px"
+                                point.style.backgroundColor = "rgba(0,0,0,0)"
 
                                 point.className = "point " + iterations
 
@@ -325,15 +336,6 @@
                             var y_avg = (shoulder.y + elbow.y + wrist.y) / 3
 
 
-                            shoulder.x
-                            shoulder.y
-
-                            elbow.x
-                            elbow.y
-
-                            wrist.x
-                            wrist.y
-
                             elbow2shoulder = [
                                 shoulder.x - elbow.x,
                                 shoulder.y - elbow.y
@@ -360,11 +362,6 @@
                                 return result
                             }
 
-                            /* elbow2shoulder_angle = Math.atan2( dot(elbow2shoulder, downwards_vector) / (norm(elbow2shoulder) * norm(downwards_vector)))
-                            console.log(elbow2shoulder_angle)
-
- */
-
                             elbow2shoulder_angle = Math.atan2(elbow2shoulder[0], elbow2shoulder[1])
                             elbow2shoulder_angle = elbow2shoulder_angle / Math.PI * 180
                             console.log(elbow2shoulder_angle)
@@ -373,41 +370,40 @@
                             elbow2wrist_angle = elbow2wrist_angle / Math.PI * 180 
                             console.log(elbow2wrist_angle)
 
-
+                            if (iterations==0){
                             shoulder = document.createElement("img")
-                            shoulder.className = "arm shoulder " + iterations
+                            shoulder.id = "shoulder_"+ side
+                            shoulder.className = "arm shoulder " 
                             shoulder.style.position = "absolute"
-                            shoulder.src = "images/" + side + "_shoulder.png"
-                            shoulder.style.height = "100px"
-                            shoulder.style.marginLeft = "-10px"
-                            shoulder.style.top = "50%"
-                            shoulder.style.left = "50%"
+                            shoulder.src = "images/" + side + "_shoulder_2.png"
                             shoulder.style.transform = "rotate(" + (-parseInt(elbow2shoulder_angle)) + "deg)"
 
-
-                            /* shoulder.style.animation = "rotate_s 10s infinite" */
-
-
                             forearm = document.createElement("img")
-                            forearm.className = "arm forearm " + iterations
+                            forearm.id = "forearm_"+ side
+                            forearm.className = "arm forearm " + side
                             forearm.style.position = "absolute"
-                            forearm.src = "images/" + side + "_forearm.png"
-                            forearm.style.height = "100px"
-                            forearm.style.top = "50%"
-                            forearm.style.left = "50%"
-                            /* forearm.style.animation = "rotate_f 8s infinite" */
+                            forearm.src = "images/" + side + "_forearm_2.png"
+
                             forearm.style.transform = "rotate(" + (-parseInt(elbow2wrist_angle)) + "deg)"
 
                             document.getElementById(side + "-circle").appendChild(forearm)
 
 
                             document.getElementById(side + "-circle").appendChild(shoulder)
+                            }
 
+                            document.getElementById("shoulder_"+ side).style.transform = "rotate(" + (-parseInt(elbow2shoulder_angle)) + "deg)"
+                            document.getElementById("forearm_"+ side).style.transform = "rotate(" + (-parseInt(elbow2wrist_angle)) + "deg)"
+
+                            
 
                         }
-                        
+
+                            if (pose.score>0.3){
                             update_arm(pose, "right")
                             update_arm(pose, "left")
+
+                        }
                         
                         
 
@@ -501,28 +497,35 @@
         }
 
         .arm{
-            animation: fade-out 2s forwards;
+            /* animation: fade-out 2s forwards; */
+            transition-property: none !important;
         }
         
         .point {
-            animation: fade-out 0.9s forwards;
+            animation: fade-out 1s forwards;
+            border-radius: 50%;
         }
 
         .shoulder {
-            width: 50px;
-            height: 100px;
-            transform-style: preserve-3d;
+            height: 100% !important;
             transition: all 1.0s linear;
-            transform-origin: top center;
+            top: 0px;
+            left: 0px;
         }
 
 
         .forearm {
-            width: 50px;
-            height: 100px;
-            transform-style: preserve-3d;
+
+            height: 100% !important;
             transition: all 1.0s linear;
-            transform-origin: top center;
+            top: 0px;
+            left: 0px;
+
+        }
+
+        #video-div:hover div{
+            background-color: red!important;
+
         }
     </style>
 </html>
