@@ -9,7 +9,7 @@
         <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
         <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/posenet"></script>
 
-        <title>Stellar by HTML5 UP</title>
+        <title>START HACK 2021</title>
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
         <link rel="stylesheet" href="assets/css/main.css"/>
@@ -42,7 +42,7 @@
             <!-- Main -->
                 <div
                 id="main"> <!-- Introduction -->
-                <section id="intro" class="main">
+<!--                 <section id="intro" class="main">
                     <div class="spotlight">
                         <div class="content">
                             <header class="major">
@@ -60,27 +60,50 @@
                         <span class="image"><img src="images/pic01.jpg" alt=""/></span>
                     </div>
                 </section>
-
+ -->
                 <!-- First Section -->
                 <section id="first" class="main special">
                     <header class="major">
-                        <h2>Magna veroeros</h2>
+                        <h2>Analyse Your Climb</h2>
                     </header>
                     <ul class="features">
+                        <li style="position: relative">
+                            <div style="position: relative">
+                                
+                            
+                            <span id="circle" class="icon solid major style1 fa-code" style="color:rgba(0,0,0,0); position: relative;">
+                                <div id="elbow" style="position: absolute; background-color: aquamarine; height: 5px; width: 5px; top: 50%; left: 50%; margin-left: -2.5px; margin-top: -2px;">Middle</div>
+                                <div id="shoulder" style="position: absolute; background-color: aquamarine; height: 5px; width: 5px; top: 50%; left: 50%; margin-left: -2.5px; margin-top: -50px;">Middle</div>
+                                <div id="wrist" style="position: absolute; background-color: aquamarine; height: 5px; width: 5px; top: 50%; left: 50%; margin-left: 30px; margin-top: 40px;">Middle</div>
+                                
+                            </span>
+                            
+                            <h3>Left Arm</h3>
+                            <p></p>
+                        </div>
+                        </li>
+
+                        <script>
+                            
+
+                        </script>
+
                         <li>
-                            <span class="icon solid major style1 fa-code"></span>
-                            <h3>Ipsum consequat</h3>
-                            <p>Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat.</p>
+                            <div style="display: inline-block;border: solid 1px #ccc; text-align: center; position:relative;">
+                                <video id="video" style="position:relative; display: relative;" controls="true">
+                                    <source
+                                    src="/datasets/vertical.mp4">
+                                    <!-- WebKit -->
+                                    Your browser does not support HTML5 video tag. Please download FireFox 3.5 or higher.
+                                </video>
+                                
+                                <div id="output" style="display: inline-block; top: 4px; position: relative; "></div>
+                            </div>
                         </li>
                         <li>
-                            <span class="icon major style3 fa-copy"></span>
-                            <h3>Amed sed feugiat</h3>
-                            <p>Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat.</p>
-                        </li>
-                        <li>
-                            <span class="icon major style5 fa-gem"></span>
-                            <h3>Dolor nullam</h3>
-                            <p>Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat.</p>
+                            <span class="icon major style5 fa-gem" style="color:rgba(0,0,0,0)"></span>
+                            <h3>Right Arm</h3>
+                            <p></p>
                         </li>
                     </ul>
                     <footer class="major">
@@ -93,7 +116,7 @@
                 </section>
 
                 <!-- Second Section -->
-                <section id="second" class="main special">
+             <!--    <section id="second" class="main special">
                     <header class="major">
                         <h2>Ipsum consequat</h2>
                         <p>Donec imperdiet consequat consequat. Suspendisse feugiat congue<br/>
@@ -134,10 +157,10 @@
                             </li>
                         </ul>
                     </footer>
-                </section>
+                </section> -->
 
                 <!-- Get Started -->
-                <section id="cta" class="main special">
+            <!--     <section id="cta" class="main special">
                     <header class="major">
                         <h2>Congue imperdiet</h2>
                         <p>Donec imperdiet consequat consequat. Suspendisse feugiat congue<br/>
@@ -154,11 +177,11 @@
                         </ul>
                     </footer>
                 </section>
-
+ -->
             </div>
 
             <!-- Footer -->
-            <footer id="footer">
+            <!-- <footer id="footer">
                 <section>
                     <h2>Aliquam sed mauris</h2>
                     <p>Sed lorem ipsum dolor sit amet et nullam consequat feugiat consequat magna adipiscing tempus etiam dolore veroeros. eget dapibus mauris. Cras aliquet, nisl ut viverra sollicitudin, ligula erat egestas velit, vitae tincidunt odio.</p>
@@ -211,7 +234,7 @@
                 <p class="copyright">&copy; Untitled. Design:
                     <a href="https://html5up.net">HTML5 UP</a>.</p>
             </footer>
-
+ -->
         </div>
 
         <!-- Scripts -->
@@ -221,16 +244,7 @@
                 		  </video>
                  -->
 
-        <div style="border: solid 1px #ccc; padding: 10px; text-align: center; position:relative;">
-            <video id="video" style="position:relative;" controls="true">
-                <source
-                src="/datasets/traverse.mp4">
-                <!-- WebKit -->
-                Your browser does not support HTML5 video tag. Please download FireFox 3.5 or higher.
-            </video><br/>
-            <button onclick="shoot()" style="width: 64px;border: solid 2px #ccc;">Capture</button><br/>
-            <div id="output" style="display: inline-block; top: 4px; position: relative ;border: dotted 1px #ccc; padding: 2px;"></div>
-        </div>
+        
 
 
         <div id="pose_classifier" style="position: relative;">
@@ -242,7 +256,6 @@
         <script>
 
 
-			var a = []
             var flipHorizontal = false;
 
             var imageElement = document.getElementById('pose_classifier').children[0];
@@ -275,7 +288,6 @@
                 setInterval(function () {
                     forward().then(function (pose) {
 						
-						a.push(pose)
                         function plot_point(keypoint) {
                             let pose_classifier = document.getElementById('video').parentNode
 							
@@ -285,6 +297,7 @@
                                 point.style.height = "5px"
                                 point.style.width = "5px"
                                 point.style.backgroundColor = "red"
+                                
 								point.className = "point"
 
                                 point.style.top = "" + parseInt(keypoint.position.y) + "px"
@@ -296,13 +309,47 @@
                             }
 
 
-
-
                         }
+
+
+
                         for (var i = 0; i < pose.keypoints.length; i++) {
                             plot_point(pose.keypoints[i])
+                        }
+
+                        function update_arm(pose, side){
+                            if (side == "right"){
+                                var shoulder = pose.keypoints[6].position
+                                var elbow = pose.keypoints[8].position
+                                var wrist = pose.keypoints[10].position
+                            }
+                            
+                            if (side == "left"){
+                                var shoulder = pose.keypoints[5].position
+                                var elbow = pose.keypoints[7].position
+                                var wrist = pose.keypoints[9].position
+                            } 
+
+                            var x_avg = (shoulder.x + elbow.x + wrist.x)/3
+                            var y_avg = (shoulder.y + elbow.y + wrist.y)/3
+
+                            shoulder.x = shoulder.x - x_avg
+                            shoulder.y = shoulder.y - y_avg
+
+                            elbow.x = elbow.x - x_avg
+                            elbow.y = elbow.y - y_avg
+
+                            wrist.x = wrist.x - x_avg
+                            wrist.y = wrist.y - y_avg
+
+
+                            
+
 
                         }
+                        update_arm(pose, "right")
+
+                        
 
 
                         
@@ -314,50 +361,8 @@
             }
             /* Creating NN */
             run()
-
-            var neural_network = posenet.load({
-                architecture: 'ResNet50',
-                outputStride: 16,
-                inputResolution: {
-                    width: imageElement.width,
-                    height: imageElement.height
-                },
-                quantBytes: 4
-            }).then(function (net) { /* Do forward run */
-                const pose = net.estimateSinglePose(imageElement, {flipHorizontal: flipHorizontal});
-                return pose;
-
-            }).then(function (pose) {
-
-                function plot_point(keypoint) {
-                    let pose_classifier = document.getElementById('pose_classifier')
-                    if (keypoint.score > 0) {
-                        let point = document.createElement('div')
-                        point.style.position = 'absolute'
-                        point.style.height = "5px"
-                        point.style.width = "5px"
-                        point.style.backgroundColor = "red"
-
-                        point.style.top = "" + parseInt(keypoint.position.y) + "px"
-                        point.style.left = "" + parseInt(keypoint.position.x) + "px"
-
-                        point.id = keypoint.part
-
-                        pose_classifier.appendChild(point)
-                    }
-
-
-                }
-                for (var i = 0; i < pose.keypoints.length; i++) {
-                    plot_point(pose.keypoints[i])
-                }
-
-
-            })
-        </script>
-
-
-        <script>
+        /* 
+        Taking frames out of the video */
             var videoId = 'video';
             var scaleFactor = 1;
             var snapshots = [];
@@ -402,4 +407,15 @@
         <script src="assets/js/main.js"></script>
 
     </body>
+
+    <style>
+        @keyframes fade-out {
+            from {opacity: 1;}
+            to {opacity: 0;}
+            }
+        
+        .point{
+            animation: fade-out 0.9s forwards;
+        }
+    </style>
 </html>
