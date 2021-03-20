@@ -13,6 +13,7 @@
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
         <link rel="stylesheet" href="assets/css/main.css"/>
+        <link rel="icon" href="./images/logo.jpg">
         <noscript><link rel="stylesheet" href="assets/css/noscript.css"/></noscript>
     </head>
     <body
@@ -21,6 +22,8 @@
         <!-- Wrapper -->
         <div
             id="wrapper">
+
+            <img style="margin-left: 40%;width: 20%;" src="./images/logo.jpg" alt="">
 
             <!-- 	 Header -->
             <header
@@ -31,36 +34,37 @@
 
             <!-- Nav -->
             <nav id="nav">
-                                                                        						<ul>
-                                                                        							<li><a href="#intro" class="active">Pro </a></li>
-                                                                        							<li><a href="#first">Beautify</a></li>
-                                                                        							<li><a href="#second">Machine Learning</a></li>
+                <ul>
+                    <li><a href="#intro" class="active">Pro</a></li>
+                    <li><a href="#first">Beautify</a></li>
+                    <li><a href="#second">Machine Learning</a></li>
 
-                                                                        							<li><a href="#second">About Us</a></li>
-                                                                        						</ul>
-                                                                        					</nav>
+                    <li><a href="#second">About Us</a></li>
+                </ul>
+            </nav>
 
             <!-- Main -->
-                <div id="main"> <!-- Introduction -->
+            <div id="main">
+                <!-- Introduction -->
                 <!--                 <section id="intro" class="main">
-                                                                                    <div class="spotlight">
-                                                                                        <div class="content">
-                                                                                            <header class="major">
-                                                                                                <h2>Ipsum sed adipiscing</h2>
-                                                                                            </header>
-                                                                                            <p>Sed lorem ipsum dolor sit amet nullam consequat feugiat consequat magna
-                                                                                                                                										adipiscing magna etiam amet veroeros. Lorem ipsum dolor tempus sit cursus.
-                                                                                                                                										Tempus nisl et nullam lorem ipsum dolor sit amet aliquam.</p>
-                                                                                            <ul class="actions">
-                                                                                                <li>
-                                                                                                    <a href="generic.html" class="button">Learn More</a>
-                                                                                                </li>
-                                                                                            </ul>
-                                                                                        </div>
-                                                                                        <span class="image"><img src="images/pic01.jpg" alt=""/></span>
-                                                                                    </div>
-                                                                                </section>
-                                                                 -->
+                                                                                                    <div class="spotlight">
+                                                                                                        <div class="content">
+                                                                                                            <header class="major">
+                                                                                                                <h2>Ipsum sed adipiscing</h2>
+                                                                                                            </header>
+                                                                                                            <p>Sed lorem ipsum dolor sit amet nullam consequat feugiat consequat magna
+                                                                                                                                                										adipiscing magna etiam amet veroeros. Lorem ipsum dolor tempus sit cursus.
+                                                                                                                                                										Tempus nisl et nullam lorem ipsum dolor sit amet aliquam.</p>
+                                                                                                            <ul class="actions">
+                                                                                                                <li>
+                                                                                                                    <a href="generic.html" class="button">Learn More</a>
+                                                                                                                </li>
+                                                                                                            </ul>
+                                                                                                        </div>
+                                                                                                        <span class="image"><img src="images/pic01.jpg" alt=""/></span>
+                                                                                                    </div>
+                                                                                                </section>
+                                                                                 -->
                 <!-- First Section -->
                     <section id="first" class="main special"> <header class="major">
                         <h2>Analyse Your Climb</h2>
@@ -72,20 +76,19 @@
 
                                 <span id="left-circle" class="icon solid major style1 fa-code" style="color:rgba(0,0,0,0); position: relative;"></span>
 
-                                <h3>Left Arm</h3>
+                                <h3>Left Arm Position</h3>
                                 <p></p>
-                                <span id="left-circle2" class="icon solid major style1 fa-code" style="color:rgba(0,0,0,0); position: relative;"></span>
-
-                                <h3>Left Leg</h3>
+                                <span id="left-circle2" class="icon solid major style1 fa-code" style="color:rgba(0,0,0,0); position: relative; display: none;"></span>
+                                <!-- 
+                                                                <h3>Left Leg</h3> -->
                                 <p></p>
                             </div>
-                            
+
                         </li>
 
-                        <script></script>
 
                         <li>
-                            <div id="video-div"style="display: inline-block; margin-left: 4px; text-align: center; position:relative;">
+                            <div id="video-div" style="display: inline-block; margin-left: 4px; text-align: center; position:relative;">
                                 <video id="video" style="position:relative; display: relative;" controls="true">
                                     <source
                                     src="/datasets/vertical.mp4">
@@ -102,12 +105,12 @@
 
                                 <span id="right-circle" class="icon solid major style1 fa-code" style="color:rgba(0,0,0,0); position: relative;"></span>
 
-                                <h3>Right Arm</h3>
+                                <h3>Right Arm Position</h3>
                                 <p></p>
 
-                                <span id="right-circle2" class="icon solid major style1 fa-code" style="color:rgba(0,0,0,0); position: relative;"></span>
+                                <span id="right-circle2" class="icon solid major style1 fa-code" style="color:rgba(0,0,0,0); position: relative;display: none;"></span>
 
-                                <h3>Right Leg</h3>
+                                <!-- <h3>Right Leg</h3> -->
                                 <p></p>
                             </div>
                         </li>
@@ -123,132 +126,132 @@
 
                 <!-- Second Section -->
             <!--    <section id="second" class="main special">
-                                                                    <header class="major">
-                                                                        <h2>Ipsum consequat</h2>
-                                                                        <p>Donec imperdiet consequat consequat. Suspendisse feugiat congue<br/>
-                                                                            posuere. Nulla massa urna, fermentum eget quam aliquet.</p>
-                                                                    </header>
-                                                                    <ul class="statistics">
-                                                                        <li class="style1">
-                                                                            <span class="icon solid fa-code-branch"></span>
-                                                                            <strong>5,120</strong>
-                                                                            Etiam
-                                                                        </li>
-                                                                        <li class="style2">
-                                                                            <span class="icon fa-folder-open"></span>
-                                                                            <strong>8,192</strong>
-                                                                            Magna
-                                                                        </li>
-                                                                        <li class="style3">
-                                                                            <span class="icon solid fa-signal"></span>
-                                                                            <strong>2,048</strong>
-                                                                            Tempus
-                                                                        </li>
-                                                                        <li class="style4">
-                                                                            <span class="icon solid fa-laptop"></span>
-                                                                            <strong>4,096</strong>
-                                                                            Aliquam
-                                                                        </li>
-                                                                        <li class="style5">
-                                                                            <span class="icon fa-gem"></span>
-                                                                            <strong>1,024</strong>
-                                                                            Nullam
-                                                                        </li>
-                                                                    </ul>
-                                                                    <p class="content">Nam elementum nisl et mi a commodo porttitor. Morbi sit amet nisl eu arcu faucibus hendrerit vel a risus. Nam a orci mi, elementum ac arcu sit amet, fermentum pellentesque et purus. Integer maximus varius lorem, sed convallis diam accumsan sed. Etiam porttitor placerat sapien, sed eleifend a enim pulvinar faucibus semper quis ut arcu. Ut non nisl a mollis est efficitur vestibulum. Integer eget purus nec nulla mattis et accumsan ut magna libero. Morbi auctor iaculis porttitor. Sed ut magna ac risus et hendrerit scelerisque. Praesent eleifend lacus in lectus aliquam porta. Cras eu ornare dui curabitur lacinia.</p>
-                                                                    <footer class="major">
-                                                                        <ul class="actions special">
-                                                                            <li>
-                                                                                <a href="generic.html" class="button">Learn More</a>
-                                                                            </li>
-                                                                        </ul>
-                                                                    </footer>
-                                                                </section> -->
+                                                                                <header class="major">
+                                                                                    <h2>Ipsum consequat</h2>
+                                                                                    <p>Donec imperdiet consequat consequat. Suspendisse feugiat congue<br/>
+                                                                                        posuere. Nulla massa urna, fermentum eget quam aliquet.</p>
+                                                                                </header>
+                                                                                <ul class="statistics">
+                                                                                    <li class="style1">
+                                                                                        <span class="icon solid fa-code-branch"></span>
+                                                                                        <strong>5,120</strong>
+                                                                                        Etiam
+                                                                                    </li>
+                                                                                    <li class="style2">
+                                                                                        <span class="icon fa-folder-open"></span>
+                                                                                        <strong>8,192</strong>
+                                                                                        Magna
+                                                                                    </li>
+                                                                                    <li class="style3">
+                                                                                        <span class="icon solid fa-signal"></span>
+                                                                                        <strong>2,048</strong>
+                                                                                        Tempus
+                                                                                    </li>
+                                                                                    <li class="style4">
+                                                                                        <span class="icon solid fa-laptop"></span>
+                                                                                        <strong>4,096</strong>
+                                                                                        Aliquam
+                                                                                    </li>
+                                                                                    <li class="style5">
+                                                                                        <span class="icon fa-gem"></span>
+                                                                                        <strong>1,024</strong>
+                                                                                        Nullam
+                                                                                    </li>
+                                                                                </ul>
+                                                                                <p class="content">Nam elementum nisl et mi a commodo porttitor. Morbi sit amet nisl eu arcu faucibus hendrerit vel a risus. Nam a orci mi, elementum ac arcu sit amet, fermentum pellentesque et purus. Integer maximus varius lorem, sed convallis diam accumsan sed. Etiam porttitor placerat sapien, sed eleifend a enim pulvinar faucibus semper quis ut arcu. Ut non nisl a mollis est efficitur vestibulum. Integer eget purus nec nulla mattis et accumsan ut magna libero. Morbi auctor iaculis porttitor. Sed ut magna ac risus et hendrerit scelerisque. Praesent eleifend lacus in lectus aliquam porta. Cras eu ornare dui curabitur lacinia.</p>
+                                                                                <footer class="major">
+                                                                                    <ul class="actions special">
+                                                                                        <li>
+                                                                                            <a href="generic.html" class="button">Learn More</a>
+                                                                                        </li>
+                                                                                    </ul>
+                                                                                </footer>
+                                                                            </section> -->
 
                 <!-- Get Started -->
                 <!--     <section id="cta" class="main special">
-                                                                                    <header class="major">
-                                                                                        <h2>Congue imperdiet</h2>
-                                                                                        <p>Donec imperdiet consequat consequat. Suspendisse feugiat congue<br/>
-                                                                                            posuere. Nulla massa urna, fermentum eget quam aliquet.</p>
-                                                                                    </header>
-                                                                                    <footer class="major">
-                                                                                        <ul class="actions special">
-                                                                                            <li>
-                                                                                                <a href="generic.html" class="button primary">Get Started</a>
-                                                                                            </li>
-                                                                                            <li>
-                                                                                                <a href="generic.html" class="button">Learn More</a>
-                                                                                            </li>
-                                                                                        </ul>
-                                                                                    </footer>
-                                                                                </section>
-                                                                 -->
+                                                                                                    <header class="major">
+                                                                                                        <h2>Congue imperdiet</h2>
+                                                                                                        <p>Donec imperdiet consequat consequat. Suspendisse feugiat congue<br/>
+                                                                                                            posuere. Nulla massa urna, fermentum eget quam aliquet.</p>
+                                                                                                    </header>
+                                                                                                    <footer class="major">
+                                                                                                        <ul class="actions special">
+                                                                                                            <li>
+                                                                                                                <a href="generic.html" class="button primary">Get Started</a>
+                                                                                                            </li>
+                                                                                                            <li>
+                                                                                                                <a href="generic.html" class="button">Learn More</a>
+                                                                                                            </li>
+                                                                                                        </ul>
+                                                                                                    </footer>
+                                                                                                </section>
+                                                                                 -->
             </div>
 
             <!-- Footer -->
             <!-- <footer id="footer">
-                                                                <section>
-                                                                    <h2>Aliquam sed mauris</h2>
-                                                                    <p>Sed lorem ipsum dolor sit amet et nullam consequat feugiat consequat magna adipiscing tempus etiam dolore veroeros. eget dapibus mauris. Cras aliquet, nisl ut viverra sollicitudin, ligula erat egestas velit, vitae tincidunt odio.</p>
-                                                                    <ul class="actions">
-                                                                        <li>
-                                                                            <a href="generic.html" class="button">Learn More</a>
-                                                                        </li>
-                                                                    </ul>
-                                                                </section>
-                                                                <section>
-                                                                    <h2>Etiam feugiat</h2>
-                                                                    <dl class="alt">
-                                                                        <dt>Address</dt>
-                                                                        <dd>1234 Somewhere Road &bull; Nashville, TN 00000 &bull; USA</dd>
-                                                                        <dt>Phone</dt>
-                                                                        <dd>(000) 000-0000 x 0000</dd>
-                                                                        <dt>Email</dt>
-                                                                        <dd>
-                                                                            <a href="#">information@untitled.tld</a>
-                                                                        </dd>
-                                                                    </dl>
-                                                                    <ul class="icons">
-                                                                        <li>
-                                                                            <a href="#" class="icon brands fa-twitter alt">
-                                                                                <span class="label">Twitter</span>
-                                                                            </a>
-                                                                        </li>
-                                                                        <li>
-                                                                            <a href="#" class="icon brands fa-facebook-f alt">
-                                                                                <span class="label">Facebook</span>
-                                                                            </a>
-                                                                        </li>
-                                                                        <li>
-                                                                            <a href="#" class="icon brands fa-instagram alt">
-                                                                                <span class="label">Instagram</span>
-                                                                            </a>
-                                                                        </li>
-                                                                        <li>
-                                                                            <a href="#" class="icon brands fa-github alt">
-                                                                                <span class="label">GitHub</span>
-                                                                            </a>
-                                                                        </li>
-                                                                        <li>
-                                                                            <a href="#" class="icon brands fa-dribbble alt">
-                                                                                <span class="label">Dribbble</span>
-                                                                            </a>
-                                                                        </li>
-                                                                    </ul>
-                                                                </section>
-                                                                <p class="copyright">&copy; Untitled. Design:
-                                                                    <a href="https://html5up.net">HTML5 UP</a>.</p>
-                                                            </footer>
-                                                 -->
+                                                                            <section>
+                                                                                <h2>Aliquam sed mauris</h2>
+                                                                                <p>Sed lorem ipsum dolor sit amet et nullam consequat feugiat consequat magna adipiscing tempus etiam dolore veroeros. eget dapibus mauris. Cras aliquet, nisl ut viverra sollicitudin, ligula erat egestas velit, vitae tincidunt odio.</p>
+                                                                                <ul class="actions">
+                                                                                    <li>
+                                                                                        <a href="generic.html" class="button">Learn More</a>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </section>
+                                                                            <section>
+                                                                                <h2>Etiam feugiat</h2>
+                                                                                <dl class="alt">
+                                                                                    <dt>Address</dt>
+                                                                                    <dd>1234 Somewhere Road &bull; Nashville, TN 00000 &bull; USA</dd>
+                                                                                    <dt>Phone</dt>
+                                                                                    <dd>(000) 000-0000 x 0000</dd>
+                                                                                    <dt>Email</dt>
+                                                                                    <dd>
+                                                                                        <a href="#">information@untitled.tld</a>
+                                                                                    </dd>
+                                                                                </dl>
+                                                                                <ul class="icons">
+                                                                                    <li>
+                                                                                        <a href="#" class="icon brands fa-twitter alt">
+                                                                                            <span class="label">Twitter</span>
+                                                                                        </a>
+                                                                                    </li>
+                                                                                    <li>
+                                                                                        <a href="#" class="icon brands fa-facebook-f alt">
+                                                                                            <span class="label">Facebook</span>
+                                                                                        </a>
+                                                                                    </li>
+                                                                                    <li>
+                                                                                        <a href="#" class="icon brands fa-instagram alt">
+                                                                                            <span class="label">Instagram</span>
+                                                                                        </a>
+                                                                                    </li>
+                                                                                    <li>
+                                                                                        <a href="#" class="icon brands fa-github alt">
+                                                                                            <span class="label">GitHub</span>
+                                                                                        </a>
+                                                                                    </li>
+                                                                                    <li>
+                                                                                        <a href="#" class="icon brands fa-dribbble alt">
+                                                                                            <span class="label">Dribbble</span>
+                                                                                        </a>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </section>
+                                                                            <p class="copyright">&copy; Untitled. Design:
+                                                                                <a href="https://html5up.net">HTML5 UP</a>.</p>
+                                                                        </footer>
+                                                             -->
         </div>
 
         <!-- Scripts -->
 
         <!-- <video controls>
-                                                			<source src="/datasets/traverse.mp4" type="video/mp4">
-                                                		  </video>
-                                                 -->
+                                                        			<source src="/datasets/traverse.mp4" type="video/mp4">
+                                                        		  </video>
+                                                         -->
 
 
         <div id="pose_classifier" style="position: relative; display: none;">
@@ -258,6 +261,9 @@
 
         <!-- Place your code in the script tag below. You can also use an external .js file -->
         <script>
+            var movement_right = [0.40066514528768427, 0.40338149713278554, 0.39276972966273943, 0.4501672767985362, 0.4124992013840998, 0.44916352596775155, 0.46679524919201143, 0.6108658863626134, 0.33006363533455835, 0.5514360593806021, 0.4888881079507938, 0.4743472975590422, 0.45184627924148274, 0.4439496128580144, 0.5166782778636752, 0.5148593578608418, 0.47554432462491597, 0.4415859956057905, 0.5203493240975119, 0.5094380223430723, 0.4414284026650001, 0.45875331124983953, 0.46217720835176046, 0.44554591928523213, 0.47750522622132596, 0.45144738394764333, 0.4463816787638381, 0.4513050773449345, 0.45119232136999515, 0.41557490386445795, 0.3104999716864382, 0.4944008406257681, 0.4226051478128427, 0.40870640086114585, 0.4763934117349472, 0.38570777738706896, 0.3991917461044332, 0.4018291564663842, 0.39856017248458536, 0.40075102819851427, 0.39124372564491217, 0.40139526250396407, 0.45255002745874257, 0.4649184990052333, 0.4605278133379482, 0.4811806668494701, 0.4726996761772415, 0.35934842895645736, 0.4052594924355676, 0.41632016597966, 0.441508577602947, 0.4105788348965559, 0.4073581806002746, 0.5273239297927539, 0.5251199597346426, 0.4715703439243416, 0.4727620098442071, 0.4696719223242402, 0.5254528601185965, 0.5413647662982367, 0.5052330677335934, 0.44210671139431107, 0.439520685578019, 0.46295314019446376, 0.461694294435585, 0.4637528251640749, 0.46862351095038557, 0.46583649482230016, 0.47001594674761, 0.47035544361320847, 0.43694066076946403, 0.4577261612662133, 0.49503122329780064, 0.4258823506887711, 0.40886495227794156, 0.41590669643371936, 0.41618828261542606, 0.4149842403929492, 0.44466690650795826, 0.48625152741540006, 0.4792977388560056, 0.4847756033926874, 0.4017608586561432, 0.4214369306999919, 0.4098711624949599, 0.42511385982482097, 0.4165579963022814, 0.4279852816520908, 0.4122435463418879, 0.40434377657260934, 0.42397031406491, 0.4385629536328691, 0.42720192086800973, 0.4369691705404412, 0.46239488660351774, 0.4196112814282179, 0.40531819006286735, 0.41666941989024603, 0.43973710742873307, 0.4582261727692795, 0.41207426586205215, 0.48377142034489723, 0.48085158569898667, 0.26873817227631525, 0.6043702895837776, 0.33137232297422226, 0.49931634569803507, 0.4592444922096456, 0.3927794757988557, 0.5625041084502196, 0.4671567879963905, 0.5948414675887151, 0.5494887310533063, 0.02469857892474414, 0.4697516018489615, 0.492651162614798, 0.41773255523105657, 0.3780857519959478, 0.339679008690946, 0.30916086183780206, 0.530307680644309, 0.4322375333659904, 0.5032089808259179, 0.5029407820863451, 0.5408115262740883, 0.46748174860285363, 0.40581063795642003, 0.46678200506987705, 0.3095541213830101, 0.44904807813476894, 0.4846237819971682, 0.3837632714481047, 0.6863508375819822, 0.4194509714261297, 0.51149407111525, 0.5212724910957586, 0.554235780205943, 0.5000913510390108, 0.48070824613901314, 0.4716110204723671, 0.5360482003330868, 0.4350061334384258, 0.5601039829673234, 0.504680369015164, 0.5884554549364364, 0.5396744562459015, 0.7479929674951314, 0.4709997106452725, 0.43657190104459836, 0.44659419486244695, 0.5975043080344155, 0.692217383323424, 1.0, 0.49211149886910766, 0.42860905053875176, 0.46753544093905147, 0.5768891420401738, 0.8254892550324273, 0.5525873237312332, 0.4936752110934538, 0.45187597206074764, 0.4438422951435187, 0.5647571624106422, 0.5029187977012649, 0.36891904735161296, 0.5749469544244518, 0.5869027576627929, 0.5622106255800722, 0.5402449826932652, 0.398500698070413, 0.39404785591127955, 0.3272880328952311, 0.44464262260803467, 0.4384351610953851, 0.3507016941595448, 0.29998606544411394, 0.3445601989680147, 0.46244683878665394, 0.4681937017960279, 0.5824608006764099, 0.5240950505836555, 0.5093219207301457, 0.5459633314176462, 0.5299958072979337, 0.5909060832272534, 0.621348431104527, 0.4424345688703652, 0.39446211202446, 0.3819527621850692, 0.3745994245518912, 0.4111924468716698, 0.5815651071063638, 0.5316483346624907, 0.5660964163316136, 0.5287312501806603, 0.5460902903668933, 0.5355102741072821, 0.36623461674487234, 0.3371735949197902, 0.37512467429303864, 0.40898719784243676, 0.48746059486588167, 0.5498432336356756, 0.6416095116866859, 0.4682675604974729, 0.42493703341536637, 0.4590369009021917, 0.47509674642382843, 0.5029068137418535, 0.05422773397291487, 0.5339460939299726, 0.45062487874770696, 0.34486930747975886, 0.5435210533035828, 0.4661647942957272, 0.3682398982630414, 0.354240717846996, 0.4525547619089012, 0.5853590891729333, 0.5513951176341527, 0.4956565495198864, 0.4845675967957868, 0.6419739041013387, 0.911711431760861, 0.39937178122673167, 0.5054320207196236, 0.5209127202808714, 0.485435022470865, 0.4492260386906743, 0.43789913263702457, 0.5626941951570316, 0.5148655826885252, 0.17163657455612846, 0.4427098790655434, 0.45058096828358324, 0.45997800885593365, 0.4753046424273437, 0.6217167003063507, 0.5879590113866321, 0.5187119299706698, 0.33056964483601803, 0.387320306058295, 0.5396825096261212, 0.6279181333510007, 0.4568115332810445, 0.5583699742334355, 0.5536425659393822, 0.39929233342148435, 0.5402056046770963, 0.4182171893633908, 0.5482628368568773, 0.7653152380139482, 0.5794934097463428, 0.44713494460508685, 0.5059309078566064, 0.4885576575488742, 0.31873613907335285, 0.48965585400214945, 0.5266881543766028, 0.4663031620435486, 0.4839925706270823, 0.47627941666269175, 0.4571342383843175, 0.2014409673119083, 0.41969527334262746, 0.6391389555211193, 0.4770889707753476, 0.5037273000482572, 0.05962411198676439, 0.4957346784802064, 0.4823179742396504, 0.5063529288291684, 0.5840561640505093, 0.309313227548384, 0.5299465571293764, 0.41484492018780983, 0.427245659423368, 0.4270678124701918, 0.41065382360660374, 0.5023927414559748, 0.7081999109028992, 0.5051566838165188, 0.4579150167752365, 0.5106596440236186, 0.5353710904511185, 0.5617407598025151, 0.5588143313081358, 0.48683307784149776, 0.564024056915953, 0.4691476555100167, 0.5404590730548579, 0.606504275094439, 0.5099635703854255, 0.46545167272481636, 0.4479748174805214, 0.4742400103141527, 0.691261274543095, 0.5348448622970629, 0.6753645753300931, 0.3982867487718118, 0.624388195624866, 0.4401224215539308, 0.4400274037799472, 0.4825599743842969, 0.4518473731379598, 0.40394637278479856, 0.46776643892270653, 0.50528177509176, 0.503815637455137, 0.5143336582227939, 0.4326102315695754, 0.4263096974475514, 0.42207823277606105, 0.46363040693847835, 0.30646220944835484, 0.5215525620728539, 0.5213870184457016, 0.47048397720160734, 0.05337949685204446, 0.5249305967750184, 0.5678942754417504, 0.5008806921415904, 0.47706939311298435, 0.3762880595282248, 0.5016622078217443, 0.3669683308793484, 0.1141803941553727, 0.542217223121006, 0.7448024604290314, 0.357005543826118, 0.4759510472220209, 0.28708481440208, 0.35145336993875476, 0.7170021234480676, 0.44270754607174995, 0.5125650871751787, 0.0, 0.4749425284621277, 0.44879110876164546, 0.42306634028535395, 0.3739422587198957, 0.32395465008427304, 0.4369647358961603, 0.39183344982498225, 0.34462475052137265, 0.335348439932738, 0.3298595307280833, 0.2851027905975933, 0.31945923699518186, 0.4386304648758702, 0.3773225271075078, 0.36613176038258394, 0.3498511373612273, 0.35420192289119157, 0.34703895710015203, 0.3506677228057094, 0.35647114944144964, 0.35645178845184117, 0.35247101340526615, 0.34588732034322367, 0.43188684174139624];
+            var movement_left = [0.3379291332556211,0.3382000977788812,0.34010990778630307,0.3367046475543779,0.33534579663282277,0.33547462107368947,0.33206377547411764,0.33900022396527313,0.3436862706283687,0.33644593847778054,0.3366840519911973,0.3389985888843239,0.339716725520195,0.3348070157646892,0.33815700434407747,0.332545515455141,0.33325971430424045,0.34214298433692686,0.33556944287320334,0.33681356027128145,0.33733931954940666,0.3349174048732876,0.33599094888642483,0.3377452748252603,0.3360002263548899,0.3348104559738346,0.33519216175309136,0.3364772892341494,0.33565332526385533,0.29282876471441377,0.298631393616536,0.35776092906342316,0.32649476194327515,0.3233948462590494,0.37120662542026306,0.3297407645168834,0.329747829445999,0.32990868835576337,0.3300966084852859,0.3302834375123389,0.33138630554326964,0.33080950360996714,0.3303904762288284,0.32962073219682997,0.3308495912321744,0.33028228604541326,0.32984370050010553,0.3311002565728673,0.33159983403786014,0.33005088901955065,0.33056902300564417,0.3318004073721584,0.3245053529566081,0.31229488512446135,0.2704801986181736,0.2787965843983815,0.27930532219689735,0.2829151039799408,0.284832186947253,0.2885587715107568,0.28733166989635467,0.2886959931309677,0.29109333659121894,0.2889628945153317,0.2902167088558229,0.2932324435931252,0.2937185486734821,0.292917821174933,0.30097576855585295,0.299241417037709,0.2987041251234532,0.29950923954981723,0.2995673054093369,0.298302647199051,0.2987391537963164,0.30060621061117,0.3151113587336489,0.31516879185638147,0.3217692129538803,0.3210423676055438,0.3191641170658734,0.3193677540800298,0.31913395119312926,0.31934550376630416,0.3175163311567938,0.3201139522860255,0.31968541722499333,0.3200156927306408,0.3186952143972298,0.31874439875271665,0.3200525980890025,0.3188402425766295,0.32188943912428797,0.32168109535375494,0.324302416442087,0.3219654568143917,0.32227570018068025,0.3229935716566915,0.3230798606626202,0.32150131530918313,0.32367233809763263,0.35728891210925584,0.26921312673878733,0.130241896762765,0.20052926166612944,0.348275739784589,0.2305333055829822,0.0,0.36415451248141006,0.34669748991562205,0.49710204584716167,0.33894187127243924,0.3085719893618593,0.2976235310099444,0.2569700706795061,0.36225492171723206,0.6127913168850296,0.5916313528641852,0.4562871629979415,0.44909430878394624,0.28727147827285326,0.2826898867279093,0.3129046240648494,0.3915761079971263,0.4129748945141491,0.2302744101822541,0.2564565911810636,0.2857240853700162,0.28451854529922543,0.2981791662105402,0.29404093042172674,0.28244737167755657,0.2479049955166699,0.2725649714903171,0.28717792495189143,0.292248393294138,0.456161050587347,0.3014805380810128,0.2900369522589788,0.27537989731223017,0.3359188128730948,0.535447718531416,0.37410959794698756,0.3245002397966129,0.4126045887247783,0.23218167942453957,0.2586701366494295,0.3162403648208171,0.4340137169917485,0.43482032929201037,0.5272852380417601,0.19215428587007463,0.3006543224627806,0.2371545578809625,0.2966657246804322,0.31935238173453706,0.7261857786779143,0.13955351163274973,0.3003630715161748,0.2591636281831572,0.105750757946351,0.30579327464234946,0.5194765526618248,0.21251438791099975,0.3000700119919648,0.41173878807423053,0.3157159383905056,0.39411331175721603,0.10254275011467462,0.2244985136588712,0.26176574618446463,0.317508984157843,0.31964259306814163,0.0632859972671034,0.22509418974574766,0.32581030618155327,0.37193876063943837,0.38067199059253626,0.08721844993230352,0.22811406879614296,0.29391395781677804,0.30827907145729067,0.2874939357855703,0.32102988959812134,0.5171573491291438,0.26692430178509624,0.2944018215077314,0.3084846949912423,0.2920247473100048,0.30827725944932255,0.2752421120981727,0.2946214242882623,0.2567688435277814,0.4073017893976992,0.358805294456367,0.3999877443327572,0.5329826121042149,0.30843026783741895,0.24892164001543565,0.2753932353891848,0.3916235780755834,0.21539015538462586,0.24640351083198794,0.2879518911757061,0.33580482753030066,0.3918660302524565,0.32435647061100015,0.3116189669797443,0.2770223184063165,0.3319834498605027,0.3506150921021193,0.2773793872616532,0.31383225669710435,0.22266049311884817,0.30223719401679994,0.27764502022336246,0.3273210956588627,0.16589336249090347,0.27974147276664396,0.3400058729081195,0.3008518443948041,0.37464147408460663,0.23888785906842258,0.290668118577506,0.28109307241993275,0.24902416705247146,0.5157523916923916,0.21121773478085046,0.33500554121751824,0.339556423495142,0.2254639758042913,0.32795706709647443,0.27058675145666583,0.20985662824831436,0.1381610377793202,0.8061643619417209,0.32512549969656857,0.3503682021142749,0.3174698111708361,0.35409934913336705,0.13022356333683016,0.2478195567735778,0.3094348946538468,0.30596742108516284,0.3299249005217489,0.3345263870163285,0.4183979421104377,0.3774910124676734,0.2532121255945779,0.3344176850862681,0.29586945279420823,0.3126363950766517,0.6502013005401945,0.18581863872008128,0.23919637182592293,0.5484177377402873,0.2643793314351076,0.2543831253860174,0.2965197846070399,0.26498595588441304,0.5629123612822934,0.24187063454270363,0.33515545172101163,0.3242379807712964,0.3032372571032688,0.3049454179803429,0.38117563241449326,0.45092943522256557,0.3707438883372698,0.34271309405316097,0.36562257877453164,0.33683651755531413,0.18852226093363103,0.22700515617716197,0.20397391722263225,0.3764477538748908,0.33195068370526953,0.2670580851220808,0.26024829867483473,0.33030656579178824,0.29438710117271644,0.2962077361798454,0.3252682068049358,0.05233283930174717,0.38533868481118055,0.3345630469338484,0.26733649659736514,0.3621900632628941,0.3215681397763111,0.31232433428638917,0.2955387206926106,0.17872222531338536,0.26726551028337747,0.30835906617986386,0.47368796702177446,0.18670921287096862,0.37516594795440866,0.3108843246452743,0.29661771628600136,0.37927784522677327,0.26189575282028105,0.3669299623920124,0.35866475168508594,0.36009484245924356,0.2681259946037219,0.32152096129303237,0.3963392781047015,0.32543646562358863,0.3383973542302991,0.3010307882189087,0.3457259941223639,0.28161138903883415,0.1356444145389062,0.24739350906078558,0.2983046890607368,0.30443091176949993,0.4106240101301679,0.3284211801970759,0.3921688676555841,0.41090508806810594,0.38201119206403944,0.38237930748500076,0.3027994010205856,1.0,0.2266744890556458,0.19623661100571976,0.5336541337380911,0.30443430826176954,0.3040186968547432,0.2020026058288543,0.45330531601232876,0.5275877932775294,0.4296439362613811,0.3728489210362797,0.2106536361499519,0.42842122372050123,0.026596523474198337,0.3256624500127244,0.21439074594923324,0.20335802662334315,0.1914762161368938,0.24701267804549887,0.2636757824603361,0.3243003718789024,0.2978852960128822,0.3038723627871044,0.3063924755560242,0.15531437359900038,0.029749340437254003,0.35744062688932043,0.29957679376604995,0.2797954202913864,0.27693000289539327,0.27777065729575956,0.2803874840673907,0.2792452800160277,0.27938488667031647,0.2738425889092298,0.27600761140885194,0.2800461008378211,0.2758043774068039];
+
 
             var iterations = 0
             var flipHorizontal = false;
@@ -266,13 +272,11 @@
 
             document.getElementById('pose_classifier').style.height = imageElement.height
             document.getElementById('pose_classifier').style.width = imageElement.width
-            
-            
+
 
             async function run() {
                 const neural_network2 = await posenet.load({
-                    architecture: 'ResNet50',
-                    outputStride: 16,
+                    architecture: 'ResNet50',                   outputStride: 16,
                     inputResolution: {
                         width: imageElement.width,
                         height: imageElement.height
@@ -290,7 +294,7 @@
 
                 setInterval(function () {
                     forward().then(function (pose) {
-                        
+
                         function plot_point(keypoint) {
                             let pose_classifier = document.getElementById('video').parentNode
 
@@ -364,48 +368,137 @@
 
                             elbow2shoulder_angle = Math.atan2(elbow2shoulder[0], elbow2shoulder[1])
                             elbow2shoulder_angle = elbow2shoulder_angle / Math.PI * 180
-                            console.log(elbow2shoulder_angle)
+
 
                             elbow2wrist_angle = Math.atan2(elbow2wrist[0], elbow2wrist[1])
-                            elbow2wrist_angle = elbow2wrist_angle / Math.PI * 180 
-                            console.log(elbow2wrist_angle)
-
-                            if (iterations==0){
-                            shoulder = document.createElement("img")
-                            shoulder.id = "shoulder_"+ side
-                            shoulder.className = "arm shoulder " 
-                            shoulder.style.position = "absolute"
-                            shoulder.src = "images/" + side + "_shoulder_2.png"
-                            shoulder.style.transform = "rotate(" + (-parseInt(elbow2shoulder_angle)) + "deg)"
-
-                            forearm = document.createElement("img")
-                            forearm.id = "forearm_"+ side
-                            forearm.className = "arm forearm " + side
-                            forearm.style.position = "absolute"
-                            forearm.src = "images/" + side + "_forearm_2.png"
-
-                            forearm.style.transform = "rotate(" + (-parseInt(elbow2wrist_angle)) + "deg)"
-
-                            document.getElementById(side + "-circle").appendChild(forearm)
+                            elbow2wrist_angle = elbow2wrist_angle / Math.PI * 180
 
 
-                            document.getElementById(side + "-circle").appendChild(shoulder)
+                            if (iterations == 0) {
+                                shoulder = document.createElement("img")
+                                shoulder.id = "shoulder_" + side
+                                shoulder.className = "arm shoulder "
+                                shoulder.style.position = "absolute"
+                                shoulder.src = "images/" + side + "_hip.png"
+                                shoulder.style.transform = "rotate(" + (-parseInt(elbow2shoulder_angle)) + "deg)"
+
+                                forearm = document.createElement("img")
+                                forearm.id = "forearm_" + side
+                                forearm.className = "arm forearm " + side
+                                forearm.style.position = "absolute"
+                                forearm.src = "images/" + side + "_forearm_2.png"
+
+                                forearm.style.transform = "rotate(" + (-parseInt(elbow2wrist_angle)) + "deg)"
+
+                                document.getElementById(side + "-circle").appendChild(forearm)
+
+
+                                document.getElementById(side + "-circle").appendChild(shoulder)
                             }
 
-                            document.getElementById("shoulder_"+ side).style.transform = "rotate(" + (-parseInt(elbow2shoulder_angle)) + "deg)"
-                            document.getElementById("forearm_"+ side).style.transform = "rotate(" + (-parseInt(elbow2wrist_angle)) + "deg)"
+                            document.getElementById("shoulder_" + side).style.transform = "rotate(" + (-parseInt(elbow2shoulder_angle)) + "deg)"
+                            document.getElementById("forearm_" + side).style.transform = "rotate(" + (-parseInt(elbow2wrist_angle)) + "deg)"
 
+
+                        }
+
+
+                        function update_leg(pose, side) {
+                            if (side == "right") {
+                                var hip = pose.keypoints[12].position
+                                var knee = pose.keypoints[14].position
+                                var ankle = pose.keypoints[16].position
+                            }
+
+                            if (side == "left") {
+                                var hip = pose.keypoints[11].position
+                                var knee = pose.keypoints[13].position
+                                var ankle = pose.keypoints[15].position
+                            }
+
+                            var x_avg = (hip.x + knee.x + ankle.x) / 3
+                            var y_avg = (hip.y + knee.y + ankle.y) / 3
+
+
+                            knee2hip = [
+                                hip.x - knee.x,
+                                hip.y - knee.y
+                            ]
+                            knee2ankle = [
+                                ankle.x - knee.x,
+                                ankle.y - knee.y
+                            ]
+                            downwards_vector = [0, -1]
+
+                            function norm(vector) {
+                                var n = 0
+                                for (i = 0; i < vector.length; i++) {
+                                    n += vector[i] * vector[i]
+                                }
+                                return Math.sqrt(n)
+                            }
+
+                            function dot(v1, v2) {
+                                result = 0
+                                for (i = 0; i < v1.length; i++) {
+                                    result += v1[i] * v2[i]
+                                }
+                                return result
+                            }
+
+                            knee2hip_angle = Math.atan2(knee2hip[0], knee2hip[1])
+                            knee2hip_angle = knee2hip_angle / Math.PI * 180
+
+
+                            knee2ankle_angle = Math.atan2(knee2ankle[0], knee2ankle[1])
+                            knee2ankle_angle = knee2ankle_angle / Math.PI * 180
+
+
+                            if (iterations == 0) {
+                                hip = document.createElement("img")
+                                hip.id = "hip_" + side
+                                hip.className = "leg hip "
+                                hip.style.position = "absolute"
+                                hip.src = "images/" + side + "_hip.png"
+                                hip.style.transform = "rotate(" + (-parseInt(knee2hip_angle)) + "deg)"
+
+                                tibia = document.createElement("img")
+                                tibia.id = "tibia_" + side
+                                tibia.className = "leg tibia " + side
+                                tibia.style.position = "absolute"
+                                tibia.src = "images/" + side + "_tibia.png"
+
+                                tibia.style.transform = "rotate(" + (-parseInt(knee2ankle_angle)) + "deg)"
+
+                                document.getElementById(side + "-circle2").appendChild(tibia)
+
+
+                                document.getElementById(side + "-circle2").appendChild(hip)
+                            }
+
+                            document.getElementById("hip_" + side).style.transform = "rotate(" + (-parseInt(knee2hip_angle)) + "deg)"
+                            document.getElementById("tibia_" + side).style.transform = "rotate(" + (-parseInt(knee2ankle_angle)) + "deg)"
+
+
+                        }
+
+
+                        if (pose.score > 0.3) {
+                            update_arm(pose, "right")
+                            update_arm(pose, "left")
+                            update_leg(pose, "right")
+                            update_leg(pose, "left")
                             
 
                         }
 
-                            if (pose.score>0.3){
-                            update_arm(pose, "right")
-                            update_arm(pose, "left")
 
-                        }
+                        current_time = document.getElementById('video').currentTime
+                        frame = parseInt(current_time*2)
                         
-                        
+
+                        document.getElementsByClassName('icon')[0].style.backgroundColor= "rgba(255, 10,10, " + movement_left[frame] + ")"
+                        document.getElementsByClassName('icon')[2].style.backgroundColor= "rgba(255, 10,10, " + movement_right[frame] + ")"
 
                         iterations++
 
@@ -433,7 +526,7 @@
                     }
 
 
-                }, 500)
+                }, 320)
 
 
             }
@@ -496,11 +589,18 @@
             }
         }
 
-        .arm{
+        .arm {
             /* animation: fade-out 2s forwards; */
             transition-property: none !important;
         }
-        
+        .leg {
+            height: 100%;
+            top: 0;
+            left: 0;
+            /* animation: fade-out 2s forwards; */
+            transition-property: none !important;
+        }
+
         .point {
             animation: fade-out 1s forwards;
             border-radius: 50%;
@@ -509,8 +609,8 @@
         .shoulder {
             height: 100% !important;
             transition: all 1.0s linear;
-            top: 0px;
-            left: 0px;
+            top: 0;
+            left: 0;
         }
 
 
@@ -518,14 +618,16 @@
 
             height: 100% !important;
             transition: all 1.0s linear;
-            top: 0px;
-            left: 0px;
+            top: 0;
+            left: 0;
 
         }
 
-        #video-div:hover div{
-            background-color: red!important;
+        #video-div:hover div {
+            background-color: red !important;
 
         }
+
+        
     </style>
 </html>
