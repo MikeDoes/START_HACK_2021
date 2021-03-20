@@ -22,8 +22,8 @@
         <!-- Wrapper -->
         <div
             id="wrapper">
-
-            <img style="margin-left: 40%;width: 20%;" src="./images/logo.jpg" alt="">
+<!-- 
+            <img style="margin-left: 40%;width: 20%;" src="./images/logo.jpg" alt=""> -->
 
             <!-- 	 Header -->
             <header
@@ -35,11 +35,11 @@
             <!-- Nav -->
             <nav id="nav">
                 <ul>
-                    <li><a href="#intro" class="active">Pro</a></li>
+                    <li><a href="index.html" class="active">Pro</a></li>
                     <li><a href="filters.html">Filters</a></li>
-                    <li><a href="#second">Machine Learning</a></li>
+                    <li><a href="ml.html">Machine Learning</a></li>
 
-                    <li><a href="#second">About Us</a></li>
+                    <li><a href="about.html">About Us</a></li>
                 </ul>
             </nav>
 
@@ -117,8 +117,8 @@
                     </ul>
                     <footer class="major">
                         <ul class="actions special">
-                            <li>
-                                <a href="generic.html" class="button">Learn More</a>
+                            <li><!-- 
+                                <a href="generic.html" class="button">Learn More</a> -->
                             </li>
                         </ul>
                     </footer>
@@ -498,8 +498,9 @@
                         
 
                         document.getElementsByClassName('icon')[0].style.backgroundColor= "rgba(255, 10,10, " + movement_left[frame] + ")"
-                        document.getElementById('leftacceleration').innerHTML = 'Aceleration: ' + movement_left[frame]
+                        document.getElementById('leftacceleration').innerHTML = 'Aceleration: ' + Math.round(movement_left[frame]*10,2)/10
                         document.getElementsByClassName('icon')[2].style.backgroundColor= "rgba(255, 10,10, " + movement_right[frame] + ")"
+                        document.getElementById('rightacceleration').innerHTML = 'Aceleration: ' + Math.round(movement_right[frame]*10,2)/10
 
                         iterations++
 
@@ -587,6 +588,7 @@
             }
             to {
                 opacity: 0;
+                z-index: -99999;
             }
         }
 
@@ -631,4 +633,103 @@
 
         
     </style>
+    <style>
+        /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
+        #loader {
+    /* Uncomment this to make it run! */
+    /*
+       animation: loader 5s linear infinite; 
+    */
+    
+    position: absolute;
+    top: calc(50% - 20px);
+    left: calc(50% - 20px);
+    }
+    @keyframes loader {
+    0% { left: -100px }
+    100% { left: 110%; }
+    }
+    #box {
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    animation: animate .5s linear infinite;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 3px;
+    }
+    @keyframes animate {
+    17% { border-bottom-right-radius: 3px; }
+    25% { transform: translateY(9px) rotate(22.5deg); }
+    50% {
+      transform: translateY(18px) scale(1,.9) rotate(45deg) ;
+      border-bottom-right-radius: 40px;
+    }
+    75% { transform: translateY(9px) rotate(67.5deg); }
+    100% { transform: translateY(0) rotate(90deg); }
+    } 
+    #shadow { 
+    width: 50px;
+    height: 5px;
+    background: #000;
+    opacity: 0.1;
+    position: absolute;
+    top: 59px;
+    left: 0;
+    border-radius: 50%;
+    animation: shadow .5s linear infinite;
+    }
+    @keyframes shadow {
+    50% {
+      transform: scale(1.2,1);
+    }
+    }
+    
+    
+    .loader { 
+    
+    overflow: hidden;
+    background-color: black;
+    z-index: 99;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    animation: fade-out 8s forwards;
+    top: 0;
+    left: 0;
+    }
+    
+    
+    
+    h4 {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    font-weight: 200;
+    opacity: .5;
+      font-family: sans-serif;
+    color: #fff;
+    }
+      </style>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    
+    
+    <div class="loader">
+    <div id="loader">
+    <div id="shadow"></div>
+    <div id="box"></div>
+    </div>
+    <h4>MAP B </h4>
+    <script src='http://codepen.io/fbrz/pen/9a3e4ee2ef6dfd479ad33a2c85146fc1.js'></script>
+    
+    <script>
+        setTimeout(()=>{
+            document.getElementsByClassName('loader')[0].outerHTML = ""
+        }, 4000)
+        
+    </script>
+    </div>
 </html>
