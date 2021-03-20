@@ -1,0 +1,266 @@
+<!DOCTYPE HTML>
+<!--
+	Stellar by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/posenet"></script>
+
+        <title>START HACK 2021</title>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+        <link rel="stylesheet" href="assets/css/main.css"/>
+        <noscript><link rel="stylesheet" href="assets/css/noscript.css"/></noscript>
+    </head>
+    <body
+        class="is-preload">
+
+        <!-- Wrapper -->
+        <div
+            id="wrapper">
+
+            <!-- 	 Header -->
+            <header
+                id="header" class="alt">
+                <!-- <span class="logo"><img src="images/logo.svg" alt="" /></span> -->
+                <h1>Mammut Video Enhancer</h1>
+            </header>
+
+            <!-- Nav -->
+            <nav id="nav">
+                <ul>
+                    <li><a href="index.html" class="active">Pro</a></li>
+                    <li><a href="filters.html">Filters</a></li>
+                    <li><a href="ml.html">Machine Learning</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </nav>
+
+            <!-- Main -->
+            <div id="main">
+                <!-- First Section -->
+                <section id="first" class="main special">
+                    <header class="major">
+                        <h2>Other Approaches</h2>
+                    </header>
+                    <div class="init-text">
+                        Here we present another approaches we tested during the Hackhacthon involving sensor data and machine learning.
+                    </div>
+                    <br> <br>
+                    <h3> Pose clustering </h3>
+                    Starting from the data we obtained from the sensors we clusterize the poses of the user into the four most common ones.
+                    We crossreference this data with the video and our pose detection model in order to show to the athlete his/her most common
+                    postures to correct his mispositions.
+                    <br> <br>
+
+                    <div class="grid-container">
+                        <div class="grid-item">
+                            <img src="Images_positions/img0.png" width="150" height="150">
+                            Percentage: 15.11%
+                        </div>
+                        <div class="grid-item">
+                            <img src="Images_positions/img1-2.png" width="150" height="150">
+                            Percentage: 51.37%
+                        </div>
+                        <div class="grid-item">
+                            <img src="Images_positions/img3-2.png" width="150" height="150">
+                            Percentage: 16.76%
+                        </div>
+                        <div class="grid-item">
+                            <img src="Images_positions/img4-2.png" width="150" height="150">
+                            Percentage: 16.76%
+                        </div>
+                    </div>
+
+
+            </div>
+
+
+                </section>
+            </div>
+
+        </div>
+
+
+        <div id="pose_classifier" style="position: relative; display: none;">
+            <img src='images/flo3.png'/>
+        </div>
+
+
+        <script src="assets/js/jquery.scrollex.min.js"></script>
+        <script src="assets/js/jquery.scrolly.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
+
+    </body>
+
+    <style>
+        @keyframes fade-out {
+            from {
+                opacity: 1;
+            }
+            to {
+                opacity: 0;
+            }
+        }
+        .grid-item {
+            width: 60%;
+        }
+
+        .grid-container {
+            width: 80%;
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            margin: auto;
+        }
+
+        .grid-item {
+            border: rgba(0, 0, 0, 0.8);
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .grid-item2 {
+            border: rgba(0, 0, 0, 0.8);
+            font-size: 15px;
+            text-align: left;
+        }
+
+
+        .arm {
+            /* animation: fade-out 2s forwards; */
+            transition-property: none !important;
+        }
+
+        .point {
+            animation: fade-out 1s forwards;
+            border-radius: 50%;
+        }
+
+        .shoulder {
+            height: 100% !important;
+            transition: all 1.0s linear;
+            top: 0;
+            left: 0;
+        }
+
+
+        .forearm {
+
+            height: 100% !important;
+            transition: all 1.0s linear;
+            top: 0;
+            left: 0;
+
+        }
+
+        #video-div:hover div {
+            background-color: red !important;
+
+        }
+    </style>
+    <style>
+        /* NOTE: The styles were added inline because Prefixfree needs access to your styles and they must be inlined if they are on local disk! */
+        #loader {
+    /* Uncomment this to make it run! */
+    /*
+       animation: loader 5s linear infinite;
+    */
+
+    position: absolute;
+    top: calc(50% - 20px);
+    left: calc(50% - 20px);
+    }
+    @keyframes loader {
+    0% { left: -100px }
+    100% { left: 110%; }
+    }
+    #box {
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    animation: animate .5s linear infinite;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 3px;
+    }
+    @keyframes animate {
+    17% { border-bottom-right-radius: 3px; }
+    25% { transform: translateY(9px) rotate(22.5deg); }
+    50% {
+      transform: translateY(18px) scale(1,.9) rotate(45deg) ;
+      border-bottom-right-radius: 40px;
+    }
+    75% { transform: translateY(9px) rotate(67.5deg); }
+    100% { transform: translateY(0) rotate(90deg); }
+    }
+    #shadow {
+    width: 50px;
+    height: 5px;
+    background: #000;
+    opacity: 0.1;
+    position: absolute;
+    top: 59px;
+    left: 0;
+    border-radius: 50%;
+    animation: shadow .5s linear infinite;
+    }
+    @keyframes shadow {
+    50% {
+      transform: scale(1.2,1);
+    }
+    }
+
+
+    .loader {
+
+    overflow: hidden;
+    background-color: black;
+    z-index: 99;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    animation: fade-out 8s forwards;
+    top: 0;
+    left: 0;
+    }
+
+
+
+    h4 {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    font-weight: 200;
+    opacity: .5;
+      font-family: sans-serif;
+    color: #fff;
+    }
+      </style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+
+    <div class="loader">
+    <div id="loader">
+    <div id="shadow"></div>
+    <div id="box"></div>
+    </div>
+    <h4>MAP B </h4>
+    <script src='http://codepen.io/fbrz/pen/9a3e4ee2ef6dfd479ad33a2c85146fc1.js'></script>
+
+    <script>
+        setTimeout(()=>{
+            document.getElementsByClassName('loader')[0].outerHTML = ""
+        }, 4000)
+
+    </script>
+    </div>
+</html>
