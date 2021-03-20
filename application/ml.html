@@ -22,8 +22,8 @@
         <!-- Wrapper -->
         <div
             id="wrapper">
-
-            <img style="margin-left: 40%;width: 20%;" src="./images/logo.jpg" alt="">
+<!-- 
+            <img style="margin-left: 40%;width: 20%;" src="./images/logo.jpg" alt=""> -->
 
             <!-- 	 Header -->
             <header
@@ -35,11 +35,11 @@
             <!-- Nav -->
             <nav id="nav">
                 <ul>
-                    <li><a href="#intro" class="active">Pro</a></li>
+                    <li><a href="index.html" class="active">Pro</a></li>
                     <li><a href="filters.html">Filters</a></li>
-                    <li><a href="#second">Machine Learning</a></li>
+                    <li><a href="ml.html">Machine Learning</a></li>
 
-                    <li><a href="#second">About Us</a></li>
+                    <li><a href="about.html">About Us</a></li>
                 </ul>
             </nav>
 
@@ -117,8 +117,8 @@
                     </ul>
                     <footer class="major">
                         <ul class="actions special">
-                            <li>
-                                <a href="generic.html" class="button">Learn More</a>
+                            <li><!-- 
+                                <a href="generic.html" class="button">Learn More</a> -->
                             </li>
                         </ul>
                     </footer>
@@ -498,8 +498,9 @@
                         
 
                         document.getElementsByClassName('icon')[0].style.backgroundColor= "rgba(255, 10,10, " + movement_left[frame] + ")"
-                        document.getElementById('leftacceleration').innerHTML = 'Aceleration: ' + movement_left[frame]
+                        document.getElementById('leftacceleration').innerHTML = 'Aceleration: ' + Math.round(movement_left[frame]*10,2)/10
                         document.getElementsByClassName('icon')[2].style.backgroundColor= "rgba(255, 10,10, " + movement_right[frame] + ")"
+                        document.getElementById('rightacceleration').innerHTML = 'Aceleration: ' + Math.round(movement_right[frame]*10,2)/10
 
                         iterations++
 
