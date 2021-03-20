@@ -256,7 +256,7 @@
             document.getElementById('pose_classifier').style.height = imageElement.height
             document.getElementById('pose_classifier').style.width = imageElement.width
             
-            var a = []
+            
 
             async function run() {
                 const neural_network2 = await posenet.load({
@@ -409,7 +409,7 @@
                             update_arm(pose, "right")
                             update_arm(pose, "left")
                         
-                        a.push(pose)
+                        
 
                         iterations++
 
