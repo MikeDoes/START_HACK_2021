@@ -82,7 +82,7 @@
                             <div style="display: inline-block;border: solid 1px #ccc; text-align: center; position:relative;">
                                 <video id="video" style="position:relative; display: relative;" controls="true">
                                     <source
-                                    src="/datasets/traverse.mp4">
+                                    src="/datasets/vertical_horizontal.mp4">
                                     <!-- WebKit -->
                                     Your browser does not support HTML5 video tag. Please download FireFox 3.5 or higher.
                                 </video>
@@ -255,7 +255,8 @@
 
             document.getElementById('pose_classifier').style.height = imageElement.height
             document.getElementById('pose_classifier').style.width = imageElement.width
-
+            
+            var a = []
 
             async function run() {
                 const neural_network2 = await posenet.load({
@@ -408,6 +409,7 @@
                             update_arm(pose, "right")
                             update_arm(pose, "left")
                         
+                        a.push(pose)
 
                         iterations++
 
