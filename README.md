@@ -11,3 +11,5 @@ On the application folder we delevop a website for our different approachs visua
 - Segmentation.ipynb:  Notebook for image segmentantion.
 - Prediction.ipynb: Notebook for movement prediction.
 - Clusterization.ipynb: Notebook for clusterization pose images.
+
+![Graph](https://github.com/MikeDoes/START_HACK_2021/blob/main/images/Logo.png)
