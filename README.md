@@ -1,6 +1,6 @@
 # START_HACK_2021
 
-This is our repository for the Start Hack 2021
+This is our repository for the Start Hack 2021, Mammut case.
 
 ## Application part
 
