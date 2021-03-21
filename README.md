@@ -6,6 +6,8 @@ This is our repository for the Start Hack 2021, Mammut case.
 
 On the application folder we delevop a website for our different approachs visualization.
 
+Most of the logic for page is incorporated inside of the html files and we used a freely available open source code for the neural network to classify the poses.
+
 ## Notebooks with our methods implemented
 
 - Segmentation.ipynb:  Notebook for image segmentantion.
